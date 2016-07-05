@@ -1,0 +1,215 @@
+ * {
+    box-sizing: border-box;
+}
+
+.row {
+   border: 1px solid black;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+header {
+    border: 1px solid black;
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 25px;
+}
+
+/* for mobile only */
+[class*="col-"] {
+    width:100%;
+    border: 1px solid red;
+}
+
+/* settings for tablet */
+@media only screen and (min-width:600px) {
+     .col-t-12 {
+        width: 100%;
+        border: 1px solid blue;
+    }
+
+    .col-t-11 {
+        width: 91.66%;
+        border: 1px solid blue;
+    }
+    .col-t-10 {
+        width: 83.33%;
+        border: 1px solid blue;
+        }
+    .col-t-9 {
+        width: 75%;
+        border: 1px solid blue;
+    }
+    .col-t-8 {
+        width: 66.66%;
+        border: 1px solid blue;
+    }
+    .col-t-7 {
+        width: 58.33%;
+        border: 1px solid blue;
+    }
+    .col-t-6 {
+        width: 50%;
+        border: 1px solid blue;
+    }
+    .col-t-5 {
+        width: 41.66%;
+        border: 1px solid blue;
+    }
+    .col-t-4 {
+        width: 33.33%;
+        border: 1px solid blue;
+    }
+    .col-t-3 {
+        width: 25%;
+        border: 1px solid blue;
+        }
+    .col-t-2 {
+        width: 16.66%;
+        border: 1px solid blue;
+        }
+    .col-t-1 {
+        width: 8.33%;
+        border: 1px solid blue;
+    }
+
+    [class*="col-"] {
+        float:left;
+        padding: 10px;
+    }
+}
+
+
+/* settings for desktop */
+@media only screen and (min-width:768px) {
+     .col-12 {
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    .col-11 {
+        width: 91.66%;
+        border: 1px solid black;
+    }
+    .col-10 {
+        width: 83.33%;
+        border: 1px solid black;
+        }
+    .col-9 {
+        width: 75%;
+        border: 1px solid black;
+    }
+    .col-8 {
+        width: 66.66%;
+        border: 1px solid black;
+    }
+    .col-7 {
+        width: 58.33%;
+        border: 1px solid black;
+    }
+    .col-6 {
+        width: 50%;
+        border: 1px solid black;
+    }
+    .col-5 {
+        width: 41.66%;
+        border: 1px solid black;
+    }
+    .col-4 {
+        width: 33.33%;
+        border: 1px solid black;
+    }
+    .col-3 {
+        width: 25%;
+        border: 1px solid black;
+        }
+    .col-2 {
+        width: 16.66%;
+        border: 1px solid black;
+        }
+    .col-1 {
+        width: 8.33%;
+        border: 1px solid black;
+    }
+
+    [class*="col-"] {
+        float:left;
+        padding: 10px;
+    }
+}
+
+
+
+html {
+    font-family: sans-serif;
+}
+
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    font-size: 18px;
+    border: 1px dotted #cccccc;
+}
+
+li.menu {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    float: left;
+
+
+}
+
+li.menu:hover {
+    background-color: black;
+    color: lightgray;
+}
+
+.menuDiv {
+    padding: 0;
+}
+
+li:hover .menu-content{
+    display: block;
+}
+
+
+.menu-content {
+    display:none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    font-size: 18px;
+    }
+
+.modal {
+    z-index: 10;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: gray;
+}
+
+.modal
+
+.modal-content {
+    margin: auto;
+    background-color: #ffffff;
+    position: relative;
+    width: 400px;
+    height: 250px;
+    opacity: 1px;
+}
+
+
