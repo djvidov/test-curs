@@ -1,3 +1,0 @@
-function Bauu() {
-    alert("bauuuuuuu");
-}
