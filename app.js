@@ -1,3 +1,0 @@
-function Bauuu () {
-    alert ("bauu");
-}
