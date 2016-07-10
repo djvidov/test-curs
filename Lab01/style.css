@@ -1,0 +1,54 @@
+p {
+    color: red;
+    font-size: 40px;
+}
+
+img {
+    width: 450px;
+    height: 300px;
+}
+
+rudi {
+    color: red;
+    font-size: 25px;
+}
+
+video {
+    width: 320px;
+    height: 240px;
+}
+
+iframe {
+    width: 420px;
+    height: 315px;
+}
+
+table {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+thead {
+    color: red;
+}
+
+tbody {
+    color: blue;
+}
+
+tfoot {
+    color: green;
+}
+
+div {
+    border: 1px solid black;
+    margin: 1px 1px 1px 1px;
+}
+
+span {
+    border: 1px solid black;
+    margin: 5px 5px 5px 5px;
+}

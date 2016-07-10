@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Prima pagina web</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="app.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <p>Neataaaa!!!</p>
+    <input type="button" onclick="Bauu()" value="asdf" />
+</body>
+
+</html>

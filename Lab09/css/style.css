@@ -1,0 +1,90 @@
+img {
+    width: 480px;
+    height: 360px;
+}
+
+div,
+span {
+    border: 1px solid black;
+    margin: 3px;
+}
+
+.button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: #008cba;
+}
+
+.button3 {
+    border-radius: 15px;
+}
+
+.relativeDiv {
+    position: relative;
+    left: 25px;
+    top: 45px;
+    border: 1px solid #a3b133;
+    background-color: lightcoral;
+    z-index: 901;
+}
+
+.absoluteDiv {
+    left: 10px;
+    bottom: 10px;
+    height: 30px;
+    width: 150px;
+    border: 1px solid black;
+    position: absolute;
+    background-color: aquamarine;
+    z-index: 900;
+}
+
+.fixedDiv {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+    position: fixed;
+    background-color: lightblue;
+    margin: 0;
+}
+
+.boxing {
+    width: 300px;
+    height: 300px;
+    border: 50px solid black;
+    padding: 50px;
+    margin: 50px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    width: 150px;
+    font-size: 18px;
+    border: 1px dotted #cccccc;
+}
+
+li {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+li:hover {
+    background-color: black;
+    color: lightgray;
+}
