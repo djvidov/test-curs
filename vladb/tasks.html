@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Taskmaker</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+    
+    
+
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="organise, tasks, time manegement"/>
+    <meta name="description" content="this site helps u to organise your time"/>
+    <meta name="author" content="vlad"/>
+</head>
+
+<body>
+<div class="rap">
+    <div class="box row">
+        <div class="jumbotron" style="background-color:black">
+            <header><h1>Tascuri Babane</h1></header>
+        </div>
+    </div>
+
+    <div class="row box">
+        <div class="col-xs-12 ">
+            <div >
+                <section>
+                    <h3>Magic with java</h3>
+                    <article>
+                        <img src="images/pic_bulboff.gif" id="imgBec">
+                        <br/>
+                     <button  onclick="lightOff()">clickme off</button>
+                        <button  onclick="lightOn()">clickme on</button>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div  class="row">
+        <div class="box col-xs-2">
+            <div>
+                <nav>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role=""><a href="#">java_1</a></li>
+                        <li role=""><a href="#">java_2</a></li>
+                        <li role=""><a href="#">java_3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div  class="col-xs-8 text-center">
+            <div id="mainBody">
+                <div>
+                <section>
+                    <h1>This is my main section</h1>
+                    <header>
+                        <h1>this is leson1</h1>                 
+                    </header>
+
+                    <article>
+                    <button id="drktheme" onclick="setTheme('mainBody','darkTheme','lightTheme')">change dark</button>
+                    <button id="littheme" onclick="setTheme('mainBody','lightTheme','darkTheme')">change light</button>
+                        <p>variabila themeChanged o sa fie setat ca true ca s-a desfasurat funtia setTheme</p><br/>
+                        
+                    
+
+                    </article>
+                    
+                    
+                    
+                    <header>
+                        <h1>this is leson2</h1>                 
+                    </header>
+
+                    <article>
+                       <p>Am vorbit despre switch() case si if/else si return;</p><br />
+                       <p>Am mai vorbit si despre cum se foloseste F10 si F11 </p> 
+
+                    </article>
+<!-- /////////////////////////////////////////////////////TEMA 2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                     <header>
+                        <h1>this is tema2 </h1>                 
+                    </header>
+
+                    <article>
+                       <p><b>1. </b>Perimetrele pentru trunghi echilateral, patrat, pentagon cu laturi egale, hexagon cu laturi egale</p><br />
+                        
+                       LATURA IN CM:<br/> <input type="number" id="id1"><br/>
+                         <select id="select">
+                        <option value="3">triunghi</option>
+                        <option value="4">patrat</option>
+                        <option value="5">pentagon</option>
+                        <option value="6">hexagon</option>
+                        </select><br/>
+                        
+                        <button id="perim" onclick="perimetru('id1','select')">GO</button><br/>
+                        <br/>
+                        
+                        
+                        
+                        <p><b>2. </b>Pentru calculatea impartirii inmultir</p><br/>
+                       X: <input type="number" id="idx"><br/>
+                       Y: <input type="number" id="idy"><br/>
+                        
+                        <select id="select2">
+                        <option value="1">adunare</option>
+                        <option value="2">scadere</option>
+                        <option value="3">inmultire</option>
+                        <option value="4">impartire</option>
+                            
+                        </select>    <br/>
+                        
+                        <button id="calc" onclick="calcule('select2','idx','idy')">GO</button><br/><br/>
+                        
+                        <p><b>3. </b>Punerea in ordine crescatoare 3 numere</p>
+                        
+                        
+                        a: <input type="number" id="ida"><br/>
+                       b: <input type="number" id="idb"><br/>
+                       c: <input type="number" id="idc"><br/>
+                        <button id="calc" onclick="cresc('ida','idb','idc')">GO</button><br/>
+                        <br/>
+                        <p><b>4. </b>Si variabilele care apeleaza functiile sunt in js.js</p>
+                                           
+
+                    </article>
+                    
+                    
+                    
+                    
+                </section>
+                </div>
+            </div>
+        </div>
+        <div  class="box col-xs-2">
+            <div>
+            <aside >
+                <img src="vege.jpg" width="100%" alt="Vege"/>
+            </aside>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <footer>
+                    <p>this is the footer with footer information and stuff like coppyright </p>
+
+                    <p><a href="http://getbootstrap.com/css/#tables" target="_blank">apasa aici pt ajutor cu
+                        bootstrap</a></p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
+</div>
+    <script src="js/js.js"></script>
+</body>
+</html>
