@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+    <link href="assets/css/style3.css" rel="stylesheet">
+
+    <script src="assets/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.0.0.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <title>JavaScript</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Aria figurilor geometrice cu laturi egale</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label  class="col-sm-4 control-label">Aria triunghiului</label>
+                                <div class="col-sm-4">
+                                    <button type="button" class="btn btn-default" onclick="area(3,3)" >Calculeaza</button>
+                                </div>
+                            </div> <div class="form-group">
+                                <label  class="col-sm-4 control-label">Aria patratului</label>
+                                <div class="col-sm-4">
+                                    <button type="button" class="btn btn-default" id="2" onclick="area(4,3)">Calculeaza</button>
+                                </div>
+                            </div> <div class="form-group">
+                                <label  class="col-sm-4 control-label">Aria pentagonului</label>
+                                <div class="col-sm-4">
+                                    <button type="button" class="btn btn-default" id="3" onclick="area(5,3)">Calculeaza</button>
+                                </div>
+                            </div> <div class="form-group">
+                                <label  class="col-sm-4 control-label">Aria hexagonului</label>
+                                <div class="col-sm-4">
+                                    <button type="button" class="btn btn-default" id="4" onclick="area(6,3)" >Calculeaza</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rezultat" class="col-sm-4 control-label">Rezultat</label>
+                                <div class="col-sm-4">
+                                    <div class="rezultat" id="rezultat"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Calcule matematice simple</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">Adunare</label>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c1">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c2">
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-default" onclick="calculus(document.getElementById('c1').value,document.getElementById('c2').value,1)" >Calculeaza</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">Scadere</label>
+                                <div class="col-sm-3">
+                                     <input type="number" class="form-control" id="c3">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c4">
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-default"  onclick="calculus(document.getElementById('c3').value,document.getElementById('c4').value,2)">Calculeaza</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">Inmultire</label>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c5">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c6">
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-default"  onclick="calculus(document.getElementById('c5').value,document.getElementById('c6').value,3)">Calculeaza</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">Impartire</label>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c7">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c8">
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-default" onclick="calculus(document.getElementById('c7').value,document.getElementById('c8').value,4)" >Calculeaza</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rezultat" class="col-sm-3 control-label">Rezultat</label>
+                                <div class="col-sm-3">
+                                    <div class="rezultat" id="rezultat2"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Afisarea unei variabile de tip lista ordonata crescator</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">Numere</label>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c9">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c10">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="c11">
+                                </div>
+                                <div class="col-sm-offset-3 col-sm-3">
+                                    <button type="button" class="btn btn-default showBtn" onclick="showArray(document.getElementById('c9').value,document.getElementById('c10').value,document.getElementById('c11').value)" >Afiseaza</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rezultat" class="col-sm-3 control-label">Rezultat</label>
+                                <div class="col-sm-3">
+                                    <div class="rezultat" id="rezultat3"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+</body>
+</html>
