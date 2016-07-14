@@ -175,6 +175,50 @@ function CautaMasina(nume) {
     }
     document.getElementById("carList").innerHTML = text;
 }
+
+function CautaMasinaCuContinue(nume) {
+    var cars = ["Dacia", "Renault", 5, true, "Audi"];
+    var text = "";
+    var i;
+    for (i = 0; i < cars.length; i++) {
+        if (typeof cars[i] != "string") {
+            continue;
+        }
+        if (nume == cars[i]) {
+            text = cars[i];
+            break;
+        }
+    }
+    var el = document.getElementById("carList");
+    el.innerHTML = text;
+}
 //AfiseazaNumere(10, 0);
 //AfiseazaNumereCuDoWhile(10, 0);
-CautaMasina("Renault");
+CautaMasinaCuContinue("Audi");
+
+function getPersoana() {
+    var persoana = {
+        nume: "Popescu"
+        , prenume: "Vasile"
+        , dataNasterii: "1900.01.01"
+        , ochi: {
+            culoare: "albastru"
+            , culoarePupila: "gri"
+        }
+    };
+    var x = typeof persoana["lastName"];
+    var el = document.getElementById("carList");
+    el.innerHTML = persoana.nume + ", " + persoana.prenume + " are culoarea ochilor " + persoana.ochi.culoare;
+}
+
+function getString() {
+    var str = "Avion cu motor si cu elice";
+    var pos1 = str.indexOf("cu");
+    var pos2 = str.lastIndexOf("cu");
+    var pos3 = str.slice(7, 13);
+    var pos4 = str.substring(7, 13);
+    var pos5 = str.substr(7, 11);
+    var el = document.getElementById("carList");
+    el.innerHTML = pos1 + " " + pos2 + "<br> " + pos3 + " " + pos4 + " " + pos5;
+}
+getString();
