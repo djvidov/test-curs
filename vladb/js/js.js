@@ -1,4 +1,4 @@
-/////////////////////lectia 1 
+/////////////////////lectia 1 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 function lightOff() {
     var bec = document.getElementById("imgBec");
@@ -100,139 +100,123 @@ eWeekend = Weekend(5);
 eWeekend = Weekend(6);
 eWeekend = Weekend(7);
 
-//////////////////////////TEMA 2
 
+//////////////////////////////////////////////////////////////lectia 3\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-function perimetru (elementId1, elementId2) {
-    if (elementId1 == undefined) { 
-        var lat = 33;
-        var forma = 6;
-        
-    }
-    else{
-    var lat = parseInt(document.getElementById(elementId1).value);
-    var forma = parseInt(document.getElementById(elementId2).value);
-    }
-    var perim;
-     switch(forma){
-        
-        case 3:             
-            
-             perim =forma * lat;
-             
-            break;
-        
-         case 4:  
-             perim =forma * lat;
-             
-            break;
-        
-         case 5: 
-             perim =forma * lat;
-             
-            break;
-            
-        
-         case 6: 
-             perim =forma * lat;
-             
-            break;            
-        
-    }
-    if (elementId1 !== undefined){
-        alert(perim);
-    }
-   return perim;     
-}
-
-var func1 = perimetru();
-
-function calcule(elementId1, elementId2, elementId3){
-     if (elementId1 == undefined) { 
-        var x= 44;
-         var y =66;
-        var calc ="3";
-    }
-    else{
-    var calc = document.getElementById(elementId1).value;
-    var x = parseInt(document.getElementById(elementId2).value);
-    var y = parseInt(document.getElementById(elementId3).value);
-    }
-    var mate;
+function afisMasini(){
+    var cars = ["dacie","renaut",5,true,"Audi"];
+    var text ="";
+    var i;
     
-     switch(calc){
-        
-        case "1":             
-            
-             mate = x + y;
-             
-            break;
-        
-         case "2":  mate = x - y;
-             
-            break;
-        
-         case "3": mate = x * y;
-             
-            break;
-            
-        
-         case "4":  mate = x / y;
-             
-            break;
-                
+    for (i=0; i < cars.length; i++) {
+        text += cars[i] + "<br/>";
     }
-     if (elementId1 !== undefined) {
-    alert('rezultatul este : '+ mate);
-     }
-   return mate;
+        
+    document.getElementById("carList").innerHTML = text;
+    }
+    
+    afisMasini();
+        
+        
+function afisMasiniDesc(){
+    var cars = ["dacie","renaut","Audi"];
+    var text ="";
+    var i;
+    
+    for (i =cars.length -1; i>=0; i--) {
+        text += cars[i] + "<br/>";
+    }
+        
+    document.getElementById("carListD").innerHTML = text;
+    }
+        
+    afisMasiniDesc();
+        
+        
+        
+        
+function afisMasiniForIn(){
+    var cars = ["dacie","renaut","Audi"];
+    var text ="";
+    
+    
+    for (i in cars) {
+        text += cars[i] + "<br/>";
+    }
+        
+    document.getElementById("carListFI").innerHTML = text;
+    }
+    
+    afisMasiniForIn();
+
+
+
+
+function afisNum(){
+    var text = "";
+    var start = 15;
+    var stop = 20;
+    while(start < stop){
+        text += "<br/> Numarul este care este" + start;
+        start++
+        
+    }
+    document.getElementById("carListW").innerHTML =text;
 }
+        
+afisNum();
 
-
- function cresc(elementId1, elementId2, elementId3){
-     if (elementId1 == undefined){
-         var a = 55;
-         var b = 244;
-         var c = 2;
-     }
-    else{
-    var a = parseInt(document.getElementById(elementId1).value);
-    var b = parseInt(document.getElementById(elementId2).value);
-    var c = parseInt(document.getElementById(elementId3).value);
+function afisNumDW(start,stop){
+    var text = "";
+    var min;
+    if(start > stop){
+        min = start;
+        start = stop;
+        stop = min;
     }
-    var s;
-     if(a>b)
-          {
-             s = a;
-             a = b;
-             b = s;
-         }
-     if (a>c)
-      {
-          s = c;
-          c = a;
-          a = s;
-          
-      }
-     if(b>c){
-         
-             s = b;
-             b = c;
-             c = s;
+   do{
+        text += "<br/> Numarul este care este" + start;
+        start++
+        
+    }while(start < stop);
+    document.getElementById("carListDW").innerHTML =text;
+}
+        
+afisNumDW(5,0);
+        
+        
+        
+        
+    function cautaMasini(nume){
+    var cars = ["dacie","renaut","Audi"];
+    var text ="";
+    var i;
+    
+    for (i =0; i<cars.length; i++) {
+        if(nume == cars[i]){
+            text = cars[i];
+            break;
         }
-     var crescator = [ a, b ,c];
-     if(elementId1 !== undefined){
-     alert(crescator);
-     }
-     
-     return crescator;
-     
- }
-var func3 =cresc();
-var func2 =calcule();
-var func1 = perimetru();
-     
-     
-     
-     
+              
+  
+    }
+          document.getElementById("cCarList").innerHTML = text;
+        
+    }
+    cautaMasini("Audi");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+
     

@@ -18,7 +18,7 @@
 <div class="rap">
     <div class="box row">
         <div class="jumbotron" style="background-color:black">
-            <header><h1>Tascuri Babane</h1></header>
+            <header><h1>Teme Babane</h1></header>
         </div>
     </div>
 
@@ -44,8 +44,9 @@
                 <nav>
                     <ul class="nav nav-pills nav-stacked">
                         <li role=""><a href="tasks.html">Home</a></li>
-                       <li role=""><a href="teme.html">Temele cele mai teme</a></li>                        
+                        <li role=""><a href="teme.html">Temele cele mai teme</a></li>                        
                         <li role=""><a href="stuff.html" >Nu e nimic aici</a></li>
+
                     </ul>
                 </nav>
             </div>
@@ -55,32 +56,16 @@
                 <div>
                 <section>
                     <h1>This is my main section</h1>
-                    <header>
-                        <h1>This is leson1</h1>                 
-                    </header>
-
+                    
                     <article>
                     <button id="drktheme" onclick="setTheme('mainBody','darkTheme','lightTheme')">change dark</button>
                     <button id="littheme" onclick="setTheme('mainBody','lightTheme','darkTheme')">change light</button>
                         <p>variabila themeChanged o sa fie setat ca true ca s-a desfasurat funtia setTheme</p><br/>
-                        
+                    </article>  
                     
-
-                    </article>
-                    
-                    
-                    
-                    <header>
-                        <h1>This is leson2</h1>                 
-                    </header>
-
-                    <article>
-                       <p>Am vorbit despre switch() case si if/else si return;</p><br />
-                       <p>Am mai vorbit si despre cum se foloseste F10 si F11 F8 </p> 
-
-                    </article>
 <!-- /////////////////////////////////////////////////////TEMA 2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-                     <header>
+                    <hr>
+                    <header>
                         <h1>This is tema2 </h1>                 
                     </header>
 
@@ -127,37 +112,45 @@
 
                     </article>
                     
-<!-- //////////////////////////////////////////// lectia 2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->                    
+<!-- //////////////////////////////////////////// tema 3\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->                   
+               <hr>
                     <header>
-                        <h1>This is da leson3</h1>                 
-                    </header>
-
-                    <article>
-                       <p> In lectia asta am invatat desppre structuri repetitive js: </p><br />
-                       <ul class="text-left">
-                           <li><p>for(i=0; i mai mic decat chestii; i++)</p> </li>
-                           <li><p>for in</p></li>
-                           <li><p>while</p></li>
-                           <li><p>do while</p></li>                                                 
-                        </ul>
-                        <br/><p>Exemplul de "for" folosind .inerHTML </p>
-                        <div class="text-left" id="carList"></div>
-                        <br/><p>Lista de masini descrescator folosind "for"</p>
-                        <div class="text-left" id="carListD"></div>
-                        <br/><p>Lista de masini descrescator folosind "for in"</p>
-                        <div class="text-left" id="carListFI"></div>
-                        <br/><p>Lista de masini descrescator folosind "while"</p>
-                        <div class="text-left" id="carListW"></div>
-                      <br/><p>Lista de masini descrescator folosind "do while"</p>
-                        <div class="text-left" id="carListDW"></div>
-                      <br/><p>Lista de masini descrescator folosind "break in for"</p>
-                        <div class="text-left" id="cCarList"></div>
-
-                    </article>
+                        <h1>This da tema3</h1>
+                        </header>
+                        
+                        
+                <article>
+                    <br/><p>Gaseste cele 10 capitale folosindu-te doar de prima litera</p>
+                    <br/><input type="text" id="idlitera" placeholder="prima litera">
+                    <br/><button type="button" id="capbtn" onclick="afisCap('idlitera')">do you feel lucky?</button>
+                    <br/>   <div class="text-left" id="capList"></div>
+                </article>
                     
-                </section>
+                <article>
+                    <br/><p>Da un array si sorteaza-l</p>
+                    <br/><button  type="button" id="capbtn" onclick="disarrayAray('nrarray')">Sort</button>
+                    <input type="number" id="nrarray" placeholder="numerele aici">
+                    
+                      <br/><input  type="radio" name="sort"  id="add" value="1"> imput array<br>
+                      <br/><input type="radio" name="sort" id="sort" value="2"> sort array<br>
+                
+                                        
+                    <p class="text-left">Lista neordonata:</p>
+                    <div class="text-left" id="arrayList"></div>
+                    
+                    <p class="text-left">Lista ordonata:</p>
+                   <div class="text-left" id="arraysort"></div>
+                    
+                            
+                </article>
+                    
+                
+                
+                        
+                        </section>
+                    </div>
                 </div>
-            </div>
+                    
         </div>
         <div  class="box col-xs-2">
             <div>
@@ -184,5 +177,6 @@
     
 </div>
     <script src="js/js.js"></script>
+    <script src="js/jst.js"></script>
 </body>
 </html>
