@@ -39,8 +39,8 @@
     </div>
 
     <div  class="row">
-        <div class="box col-xs-2">
-            <div>
+        <div class="box1 col-xs-2">
+            <div class="Fix">
                 <nav>
                     <ul class="nav nav-pills nav-stacked">
                         <li role=""><a href="tasks.html">Home</a></li>
@@ -79,55 +79,10 @@
                        <p>Am mai vorbit si despre cum se foloseste F10 si F11 F8 </p> 
 
                     </article>
-<!-- /////////////////////////////////////////////////////TEMA 2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-                     <header>
-                        <h1>This is tema2 </h1>                 
-                    </header>
 
-                    <article>
-                       <p><b>1. </b>Perimetrele pentru trunghi echilateral, patrat, pentagon cu laturi egale, hexagon cu laturi egale</p><br />
-                        
-                       LATURA IN CM:<br/> <input type="number" id="id1"><br/>
-                         <select id="select">
-                        <option value="3">triunghi</option>
-                        <option value="4">patrat</option>
-                        <option value="5">pentagon</option>
-                        <option value="6">hexagon</option>
-                        </select><br/>
-                        
-                        <button id="perim" onclick="perimetru('id1','select')">GO</button><br/>
-                        <br/>
-                        
-                        
-                        
-                        <p><b>2. </b>Pentru calculatea impartirii inmultir</p><br/>
-                       X: <input type="number" id="idx"><br/>
-                       Y: <input type="number" id="idy"><br/>
-                        
-                        <select id="select2">
-                        <option value="1">adunare</option>
-                        <option value="2">scadere</option>
-                        <option value="3">inmultire</option>
-                        <option value="4">impartire</option>
-                            
-                        </select>    <br/>
-                        
-                        <button id="calc" onclick="calcule('select2','idx','idy')">GO</button><br/><br/>
-                        
-                        <p><b>3. </b>Punerea in ordine crescatoare 3 numere</p>
-                        
-                        
-                        a: <input type="number" id="ida"><br/>
-                       b: <input type="number" id="idb"><br/>
-                       c: <input type="number" id="idc"><br/>
-                        <button id="calc" onclick="cresc('ida','idb','idc')">GO</button><br/>
-                        <br/>
-                        <p><b>4. </b>Si variabilele care apeleaza functiile sunt in js.js</p>
-                                           
-
-                    </article>
                     
-<!-- //////////////////////////////////////////// lectia 2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->                    
+<!-- //////////////////////////////////////////// lectia 2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->   
+                    <hr>
                     <header>
                         <h1>This is da leson3</h1>                 
                     </header>
@@ -148,12 +103,54 @@
                         <div class="text-left" id="carListFI"></div>
                         <br/><p>Lista de masini descrescator folosind "while"</p>
                         <div class="text-left" id="carListW"></div>
-                      <br/><p>Lista de masini descrescator folosind "do while"</p>
+                      
+                        <br/><p>Lista de masini descrescator folosind "do while"</p>
                         <div class="text-left" id="carListDW"></div>
-                      <br/><p>Lista de masini descrescator folosind "break in for"</p>
+                      
+                        <br/><p>Lista de masini descrescator folosind "break in for"</p>
                         <div class="text-left" id="cCarList"></div>
 
                     </article>
+<!--////////////////////////////////////////////////lectia3\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+                    <hr>
+                    <header>
+                    <h1>This is leason4</h1>
+                    </header>
+                    
+                    <article>
+                    <br/><p> Inlectia asta am invatat despre "continue"te scoate din iteratia curenta adica daacaam for(i=0; imaimic=10 ...)si avem un if(i=0)continue si sare peste loopul care indeplineste conditia</p>
+                        
+                        
+                        <br/><p>Lista de masini descrescator folosind "continue in for"</p>
+                    <br/><p> Inlectia asta am invatat despre tipuri de date: numere ;scrisa cu zecimale; string array; object; boolean </p>
+
+                    <br/> <div class="text-left" id="carListCont"></div>
+                        <br/><p>Typeof e folosit de a indentifica tipul de date a unui alament dintr-un array</p>
+                        <br/><p>Diferenta dintre undefines si null si undifined= nu are o valoare; null= nu are valoare inca;vezi sliduri pt mai multe informatii</p>
+                        <br/><p>Am invatat despre obiecte si ca obiectele sunt alcatuite din proprietati....vezi in js.js array-ul cars;Proprietatie pot fi chiar obiecte .</p>
+                        <br/><p>Deobicei proprietatile unui obiect sunt elementae care nu se schimba sau nu se poate calcula(cum ar fi inaltimea)</p>
+                        <br/><p>Ex de obiect:</p>
+                        <br/>
+                        
+                        <ul class="text-left"><p>persoana:</p>
+                        <br/><li>data nasterii</li>
+                        <br/><li>inaltime</li>
+                        <br/><li>ochi(e tip obiect cu alte prop)</li>
+                        <br/><li>piele(la fel)</li>
+                        <br/><li>culoarea pielii</li>
+                        
+                        </ul>
+                        <br><p>Functie care creaza un obiect si da nume prenume: pers.lastName sau person["lastName"]</p>
+                        <br/> <div class="text-left" id="persoana"></div>
+                        <br/><p>Asignarile sunt = si nu e la fel cu == cae e o comparatie, iar === e o comparatie in valoare si tip</p>
+                        <br/><p>Am recap operatori de comparatiie si celelalte</p>
+                        
+                        <br/><p>Tipul de string(prop si metode): var txt = ""; txt.length ;str.indexOf(); str.lastIndexOf("cu"); str.search("te")<b>UITA-TE LA SLIDUL 16</b></p>
+                        <br/> <div class="text-left" id="string"></div>
+                        
+                        
+                    </article>
+                
                     
                 </section>
                 </div>

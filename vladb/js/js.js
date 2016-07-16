@@ -204,6 +204,82 @@ afisNumDW(5,0);
         
     }
     cautaMasini("Audi");
+
+/////////////////////////////////////////////////////////////lectia 4\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+function MasiniCuContinue(){
+    var cars = ["dacie","renaut",5,true,"Audi"];
+    var text ="";
+    var i;
+    
+    for (i=0; i < cars.length; i++) {
+        if(typeof cars[i] != "string"){
+            continue;
+        }
+        text += cars[i] + "<br/>";
+    }
+        
+    document.getElementById("carListCont").innerHTML = text;
+    }
+    
+    MasiniCuContinue();
+
+
+function getPersoana(){
+    var persoana = {
+        nume: "ion",
+        prenume: "vasili",
+        datanasterii: "1900.01.01",
+        ochi:{
+            culoare: "mov cu bulinute",
+            culoare_pupila: "gri"
+        }
+    };
+   var el = document.getElementById("persoana");
+    el.innerHTML = "  ---" + persoana.nume + ", " + persoana.prenume + " are culoare ochilor " + persoana.ochi.culoare;
+}
+
+getPersoana();
+
+
+function getString(){
+    var str = "avion cu motor daca zbor o sa te omor....";
+    var pos1 = str.indexOf("cu");
+    var pos2 = str.lastIndexOf("sa");
+    var pos3 = str.search("te");
+    var pos4 = str.slice(7, 13);
+    var pos5 = str.substring(7, 12);
+    var pos5 = str.substr(7, 12);
+    
+    
+    var el = document.getElementById("string");
+    el.innerHTML = pos1 + " "+ pos2 + " " + pos3 + " " + pos4 + " " + pos5 + " " + pos5;
+}
+ 
+getString();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         
         
