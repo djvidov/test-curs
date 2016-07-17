@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Taskmaker</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+
+
+
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="organise, tasks, time manegement"/>
+    <meta name="description" content="this site helps u to organise your time"/>
+    <meta name="author" content="vlad"/>
+</head>
+
+<body>
+<div class="rap">
+    <div class="box row">
+        <div class="jumbotron" style="background-color:black">
+            <header><h1>Teme Babane</h1></header>
+        </div>
+    </div>
+
+    <div class="row box">
+        <div class="col-xs-12 ">
+            <div >
+                <section>
+                    <h3>Magic with java</h3>
+                    <article>
+                        <img src="images/pic_bulboff.gif" id="imgBec">
+                        <br/>
+                     <button  onclick="lightOff()">clickme off</button>
+                        <button  onclick="lightOn()">clickme on</button>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div  class="row">
+        <div class="box col-xs-2">
+            <div>
+                <nav>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role=""><a href="tasks.html">Home</a></li>
+                        <li role=""><a href="teme.html">Temele cele mai teme</a></li>
+                        <li role=""><a href="stuff.html" >Nu e nimic aici</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div  class="col-xs-8 text-center">
+            <div id="mainBody">
+                <div>
+                <section>
+                    <h1>This is my main section</h1>
+
+                    <article>
+                    <button id="drktheme" onclick="setTheme('mainBody','darkTheme','lightTheme')">change dark</button>
+                    <button id="littheme" onclick="setTheme('mainBody','lightTheme','darkTheme')">change light</button>
+                        <p>variabila themeChanged o sa fie setat ca true ca s-a desfasurat funtia setTheme</p><br/>
+                    </article>
+
+<!-- /////////////////////////////////////////////////////TEMA 2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                    <hr>
+                    <header>
+                        <h1>This is tema2 </h1>
+                    </header>
+
+                    <article>
+                       <p><b>1. </b>Perimetrele pentru trunghi echilateral, patrat, pentagon cu laturi egale, hexagon cu laturi egale</p><br />
+
+                       LATURA IN CM:<br/> <input type="number" id="id1"><br/>
+                         <select id="select">
+                        <option value="3">triunghi</option>
+                        <option value="4">patrat</option>
+                        <option value="5">pentagon</option>
+                        <option value="6">hexagon</option>
+                        </select><br/>
+
+                        <button id="perim" onclick="perimetru('id1','select')">GO</button><br/>
+                        <br/>
+
+
+
+                        <p><b>2. </b>Pentru calculatea impartirii inmultir</p><br/>
+                       X: <input type="number" id="idx"><br/>
+                       Y: <input type="number" id="idy"><br/>
+
+                        <select id="select2">
+                        <option value="1">adunare</option>
+                        <option value="2">scadere</option>
+                        <option value="3">inmultire</option>
+                        <option value="4">impartire</option>
+
+                        </select>    <br/>
+
+                        <button id="calc" onclick="calcule('select2','idx','idy')">GO</button><br/><br/>
+
+                        <p><b>3. </b>Punerea in ordine crescatoare 3 numere</p>
+
+
+                        a: <input type="number" id="ida"><br/>
+                       b: <input type="number" id="idb"><br/>
+                       c: <input type="number" id="idc"><br/>
+                        <button id="calc" onclick="cresc('ida','idb','idc')">GO</button><br/>
+                        <br/>
+                        <p><b>4. </b>Si variabilele care apeleaza functiile sunt in js.js</p>
+
+
+                    </article>
+
+<!-- //////////////////////////////////////////// tema 3\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+               <hr>
+                    <header>
+                        <h1>this is tema3</h1>
+                        </header>
+
+
+                <article>
+                    <br/><p>Gaseste cele 10 capitale folosindu-te doar de prima litera</p>
+                    <br/><input type="text" id="idlitera" placeholder="prima litera">
+                    <br/><button type="button" id="capbtn" onclick="afisCap('idlitera')">do you feel lucky?</button>
+                    <br/>   <div class="text-left" id="capList"></div>
+                </article>
+
+                <article>
+                    <br/><p>Da un array si sorteaza-l</p>
+                    <br/><button  type="button" id="capbtn" onclick="disarrayAray('nrarray')">Sort</button>
+                    <input type="number" id="nrarray" placeholder="numerele aici">
+
+                      <br/><input  type="radio" name="sort"  id="add" value="1"> imput array<br>
+                      <br/><input type="radio" name="sort" id="sort" value="2"> sort array<br>
+
+
+                    <p class="text-left">Lista neordonata:</p>
+                    <div class="text-left" id="arrayList"></div>
+
+                    <p class="text-left">Lista ordonata:</p>
+                   <div class="text-left" id="arraysort"></div>
+
+
+                </article>
+
+
+ <!-- //////////////////////////////////////////tema 4\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+              <hr>
+                    <header>
+                    <h1>this is tema 4</h1>
+                    </header>
+
+                    <article>
+
+                        <p>1 O functie care primeste ca parametri un string, si un numar.</p><p>Stringul sa fie impartit in parti egale </p>
+
+                    <br/><input type="text" placeholder="scrieti aici" id = "ids" >
+                    <input type="number" placeholder="numarul aici" id = "idn" >
+                        <br/><button onclick="arraySplit('ids','idn')">imparte</button>
+                        <br/><p id="splits"></p>
+
+                    </article>
+
+
+                    <article>
+
+                        <p>2 O functie care sa ordoneze crescator un array de stringuri in functie de numarul de caractere.</p>
+                        <br/><input type="text" placeholder="scrieti aici" id = "idString" >
+                        <br/><button onclick="arrayOrder('idString')">Ordoneaza</button>
+                        <br/><p id="order"></p>
+
+
+                    </article>
+
+
+
+
+                        </section>
+                    </div>
+                </div>
+
+        </div>
+        <div  class="box col-xs-2">
+            <div>
+            <aside >
+                <img src="vege.jpg" width="100%" alt="Vege"/>
+            </aside>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <footer>
+                    <p>this is the footer with footer information and stuff like coppyright </p>
+
+                    <p><a href="http://getbootstrap.com/css/#tables" target="_blank">apasa aici pt ajutor cu
+                        bootstrap</a></p>
+                    <p><a href="http://www.w3schools.com/" target="_blank">apasa aici pt ajutor cu
+                        totul W3School</a></p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</div>
+    <script src="js/js.js"></script>
+    <script src="js/jst.js"></script>
+</body>
+</html>

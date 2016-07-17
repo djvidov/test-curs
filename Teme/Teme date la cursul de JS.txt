@@ -1,0 +1,19 @@
+1. O functie care calculeaza patratul unui numar care va fi dat ca parametru;
+2. O functie care care calculeaza aria unui patrat;
+3. O functie care calculeaza perimetrul unui patrat;
+4. O functie care schimba clasa unui buton;
+5. O functie care muta o imagine la dreapta;
+6. O functie care sa mute o imagine la stanga;
+7. Folositi aceste functii pe cate un onClick de buton.
+Tema valoreazã 10000 de puncte kahoot + 2000 de puncte daca folositi si alte functii predefinite din JS
+
+1. Faceti o singura functie care sa calculeze perimetrul figurilor geometrice (trunghi echilateral, patrat, pentagon cu laturi egale, hexagon cu laturi egale) si care sa aiba doi parametri si rezultatul sa il returneze. (3000 KP)
+2. Sa faceti o singura functie care sa calculeze ( adunare, scadere, inmultire, impartire) , sa aiba 3 parametri si sa returneze rezultatul. (2000 KP)
+3. Sa faceti o functie care primeste 3 parametri ( numere ) si care sa returneze un array ( o lista ) ordonata crescator. ( 4000 KP)
+4. Fiecare functie (de la punctele 1...3) sa fie apelata de 2 ori cu parametri diferiti iar rezultatul sa fie salvat intr-o variabila. Asa cum am facut la laboratorul 14. ( 2000 KP)
+
+1. o functie in care sa aveti o variabila de tip array cu 10 capitale din europa si in cadrul unei structuri repetitive sa puneti intr-un string caputalele care incep cu o litera la alegere si sa le afisati pe site. (3000 KP)
+2. Sa faceti o functie care un array de numere si care sa returneze un array ( o lista ) ordonata crescator. ( 7000 KP)
+
+1. o functie care primeste ca parametri un string, si un numar. Scopul functiei este ca stringul sa fie impartit in parti egale, iar numarul reprezinta numarul de parti egale. Functia trebuie sa returneze un array de stringuri. Ex: pentru parametrii: "Avioncumotor" si 3, rezultatul functiei ar trebui sa fie: ["Avio", "ncum", "otor"]. 5000 KP
+2. O functie care sa ordoneze crescator un array de stringuri in functie de numarul de caractere. 5000KP

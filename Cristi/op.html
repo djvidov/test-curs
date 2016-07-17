@@ -1,0 +1,54 @@
+<!DOCTYPE hmtl>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Operații cu JavaScript</title>
+	<link href="css/style_op.css" type="text/css" rel="stylesheet">
+	<script src="js/script_op.js"></script>
+</head>
+
+<body id="mainBody">
+	<h1>Teme rezolvate cu JavaScript</h1>
+	<br>
+	<!--Un număr la puterea a doua-->
+	<h3>Calcularea pătratului unui număr</h3>
+	<label for="nr">Numărul:</label>
+	<input type="number" name="nr" maxlenght="3" id="nr">
+	<br>
+	<label for="laputere">La pătrat:</label>
+	<input type="number" name="laputere" readonly id="laputere">
+	<button id="calcul" onclick="laadoua(nr.value)">Calculez</button>
+	<br>
+	<!--Aria unui pătrat-->
+	<br>
+	<h3>Calcularea ariei unui pătrat</h3>
+	<label for="latura">Lungimea laturii:</label>
+	<input type="number" name="latura" maxlenght="3" id="latura">
+	<br>
+	<label for="ariap">Aria pătratului:</label>
+	<input type="number" name="ariap" readonly id="ariap">
+	<button id="aria" onclick="ariap(latura.value)">Calculez</button>
+	<br>
+	<!--Perimetrul pătratului-->
+	<br>
+	<h3>Calcularea perimetrului unui pătrat</h3>
+	<label for="lat">Lungimea laturii:</label>
+	<input type="number" name="lat" maxlenght="3" id="lat">
+	<br>
+	<label for="perimp">Perimetrul pătratului:</label>
+	<input type="number" name="perimp" readonly id="perimp">
+	<button id="perimetrul" onclick="perimp(lat.value)">Calculez</button>
+	<br>
+	<!--Schimbă class-a butonului-->
+	<br>
+	<div id="pozeStDr" class="centrat">
+		<div id="pozaSt" class="left">
+			<img id="pokemon" src="resurse/snorlax.gif">
+		</div>
+		<input type="button" id="btnStDr" class="btnDr" onclick="schimbPoza()" value="   Mută poza >>">
+		<div id="pozaDr" class="right"></div>
+	</div>
+</body>
+
+</html>

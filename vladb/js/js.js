@@ -1,4 +1,4 @@
-/////////////////////lectia 1 
+/////////////////////lectia 1 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 function lightOff() {
     var bec = document.getElementById("imgBec");
@@ -100,139 +100,198 @@ eWeekend = Weekend(5);
 eWeekend = Weekend(6);
 eWeekend = Weekend(7);
 
-//////////////////////////TEMA 2
+
+//////////////////////////////////////////////////////////////lectia 3\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+function afisMasini(){
+    var cars = ["dacie","renaut",5,true,"Audi"];
+    var text ="";
+    var i;
+
+    for (i=0; i < cars.length; i++) {
+        text += cars[i] + "<br/>";
+    }
+        
+    document.getElementById("carList").innerHTML = text;
+    }
+
+    afisMasini();
 
 
-function perimetru (elementId1, elementId2) {
-    if (elementId1 == undefined) { 
-        var lat = 33;
-        var forma = 6;
-        
+function afisMasiniDesc(){
+    var cars = ["dacie","renaut","Audi"];
+    var text ="";
+    var i;
+
+    for (i =cars.length -1; i>=0; i--) {
+        text += cars[i] + "<br/>";
     }
-    else{
-    var lat = parseInt(document.getElementById(elementId1).value);
-    var forma = parseInt(document.getElementById(elementId2).value);
+        
+    document.getElementById("carListD").innerHTML = text;
     }
-    var perim;
-     switch(forma){
         
-        case 3:             
-            
-             perim =forma * lat;
-             
-            break;
+    afisMasiniDesc();
+
+
         
-         case 4:  
-             perim =forma * lat;
-             
-            break;
-        
-         case 5: 
-             perim =forma * lat;
-             
-            break;
-            
-        
-         case 6: 
-             perim =forma * lat;
-             
-            break;            
-        
+
+function afisMasiniForIn(){
+    var cars = ["dacie","renaut","Audi"];
+    var text ="";
+
+
+    for (i in cars) {
+        text += cars[i] + "<br/>";
     }
-    if (elementId1 !== undefined){
-        alert(perim);
+
+    document.getElementById("carListFI").innerHTML = text;
     }
-   return perim;     
+
+    afisMasiniForIn();
+
+
+
+
+function afisNum(){
+    var text = "";
+    var start = 15;
+    var stop = 20;
+    while(start < stop){
+        text += "<br/> Numarul este care este" + start;
+        start++
+
+    }
+    document.getElementById("carListW").innerHTML =text;
 }
 
-var func1 = perimetru();
+afisNum();
 
-function calcule(elementId1, elementId2, elementId3){
-     if (elementId1 == undefined) { 
-        var x= 44;
-         var y =66;
-        var calc ="3";
+function afisNumDW(start,stop){
+    var text = "";
+    var min;
+    if(start > stop){
+        min = start;
+        start = stop;
+        stop = min;
     }
-    else{
-    var calc = document.getElementById(elementId1).value;
-    var x = parseInt(document.getElementById(elementId2).value);
-    var y = parseInt(document.getElementById(elementId3).value);
-    }
-    var mate;
-    
-     switch(calc){
+   do{
+        text += "<br/> Numarul este care este" + start;
+        start++
         
-        case "1":             
-            
-             mate = x + y;
-             
-            break;
-        
-         case "2":  mate = x - y;
-             
-            break;
-        
-         case "3": mate = x * y;
-             
-            break;
-            
-        
-         case "4":  mate = x / y;
-             
-            break;
-                
-    }
-     if (elementId1 !== undefined) {
-    alert('rezultatul este : '+ mate);
-     }
-   return mate;
+    }while(start < stop);
+    document.getElementById("carListDW").innerHTML =text;
 }
 
+afisNumDW(5,0);
 
- function cresc(elementId1, elementId2, elementId3){
-     if (elementId1 == undefined){
-         var a = 55;
-         var b = 244;
-         var c = 2;
-     }
-    else{
-    var a = parseInt(document.getElementById(elementId1).value);
-    var b = parseInt(document.getElementById(elementId2).value);
-    var c = parseInt(document.getElementById(elementId3).value);
-    }
-    var s;
-     if(a>b)
-          {
-             s = a;
-             a = b;
-             b = s;
-         }
-     if (a>c)
-      {
-          s = c;
-          c = a;
-          a = s;
-          
-      }
-     if(b>c){
-         
-             s = b;
-             b = c;
-             c = s;
+
+        
+
+    function cautaMasini(nume){
+    var cars = ["dacie","renaut","Audi"];
+    var text ="";
+    var i;
+
+    for (i =0; i<cars.length; i++) {
+        if(nume == cars[i]){
+            text = cars[i];
+            break;
         }
-     var crescator = [ a, b ,c];
-     if(elementId1 !== undefined){
-     alert(crescator);
-     }
-     
-     return crescator;
-     
- }
-var func3 =cresc();
-var func2 =calcule();
-var func1 = perimetru();
-     
-     
-     
-     
-    
+
+
+    }
+          document.getElementById("cCarList").innerHTML = text;
+
+    }
+    cautaMasini("Audi");
+
+/////////////////////////////////////////////////////////////lectia 4\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+function MasiniCuContinue(){
+    var cars = ["dacie","renaut",5,true,"Audi"];
+    var text ="";
+    var i;
+
+    for (i=0; i < cars.length; i++) {
+        if(typeof cars[i] != "string"){
+            continue;
+        }
+        text += cars[i] + "<br/>";
+    }
+
+    document.getElementById("carListCont").innerHTML = text;
+    }
+
+    MasiniCuContinue();
+
+
+function getPersoana(){
+    var persoana = {
+        nume: "ion",
+        prenume: "vasili",
+        datanasterii: "1900.01.01",
+        ochi:{
+            culoare: "mov cu bulinute",
+            culoare_pupila: "gri"
+        }
+    };
+   var el = document.getElementById("persoana");
+    el.innerHTML = "  ---" + persoana.nume + ", " + persoana.prenume + " are culoare ochilor " + persoana.ochi.culoare;
+}
+
+getPersoana();
+
+
+function getString(){
+    var str = "avion cu motor daca zbor o sa te omor....";
+    var pos1 = str.indexOf("cu");
+    var pos2 = str.lastIndexOf("sa");
+    var pos3 = str.search("te");
+    var pos4 = str.slice(7, 13);
+    var pos5 = str.substring(7, 12);
+    var pos5 = str.substr(7, 12);
+
+
+    var el = document.getElementById("string");
+    el.innerHTML = pos1 + " "+ pos2 + " " + pos3 + " " + pos4 + " " + pos5 + " " + pos5;
+}
+
+getString();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,8 +6,17 @@
     color:magenta;
     text-align: center;
 }
+.Fix{
+
+    margin-top: 5px;
+    border: 5px double chartreuse;
+    background-color: black;
+    height: Auto;
+    color:magenta;
+    text-align: center;
+}
 .rap{
-    position: relative;
+
     background-color: black;
    
 }
