@@ -11,19 +11,146 @@ function perimp(lat) {
 }
 
 function schimbPoza() {
-	//var clasa = document.getElementsByClassName("btnDr");
+	var buton = btnStDr.value;
 	//alert(clasa);
-	//if (clasa == "btnDr") {
-	document.getElementById("btnStDr").classList = [];
-	document.getElementById("btnStDr").classList.add("btnSt");
-	document.getElementById("btnStDr").value = "<< Mută poza   ";
-	document.getElementById("pozaSt").innerHTML = "";
-	document.getElementById("pozaDr").innerHTML = '<img id="pokemon" src="resurse/snorlax.gif">';
-	//} else {
-	//document.getElementById("btnStDr").classList = [];
-	//document.getElementById("btnStDr").classList.add("btnDr");
-	//document.getElementById("btnStDr").value = "   Mută poza >>";
-	//document.getElementById("pozaDr").innerHTML = "";
-	//document.getElementById("pozaSt").innerHTML = '<img id="pokemon" src="resurse/snorlax.gif">';
-	//}
+	if (buton == "   Mută poza >>") {
+		document.getElementById("btnStDr").classList = [];
+		document.getElementById("btnStDr").classList.add("btnSt");
+		document.getElementById("btnStDr").value = "<< Mută poza   ";
+		document.getElementById("pozaSt").innerHTML = "";
+		document.getElementById("pozaDr").innerHTML = '<img id="pokemon" src="resurse/snorlax.gif">';
+	} else {
+		document.getElementById("btnStDr").classList = [];
+		document.getElementById("btnStDr").classList.add("btnDr");
+		document.getElementById("btnStDr").value = "   Mută poza >>";
+		document.getElementById("pozaDr").innerHTML = "";
+		document.getElementById("pozaSt").innerHTML = '<img id="pokemon" src="resurse/snorlax.gif">';
+	}
+}
+
+function perimFig(l, n) {
+	var pfg = l * n;
+	var forma = "";
+	switch (n) {
+	case "3":
+		forma = "triunghiului";
+		break;
+	case "4":
+		forma = "pătratului";
+		break;
+	case "5":
+		forma = "pentagonului";
+		break;
+	case "6":
+		forma = "hexagonului";
+	}
+
+	document.getElementById('perimGeo').innerHTML = "Perimetrul " + forma + " este " + pfg;
+}
+
+function aritmetic(a, x, b) {
+	var op = eval(a + x + b);
+	document.getElementById('rezultat').innerHTML = op;
+}
+
+function ordonareC(a, b, c) {
+	var op = [a, b, c];
+	op.sort(function (x, y) {
+		return x - y
+	});
+	document.getElementById('ordC').innerHTML = op;
+}
+
+function filtrareC(litera) {
+	var capitE = ["Amsterdam",
+				"Atena",
+				"Berlin",
+				"București",
+				"Lisabona",
+				"Londra",
+				"Luxemburg",
+				"Madrid",
+				"Paris",
+				"Roma"];
+	var txt = "";
+	var x;
+	for (x in capitE) {
+		if (capitE[x].indexOf(litera.toUpperCase()) !== 0) {
+			continue;
+		} else {
+			txt += capitE[x] + ", ";
+		}
+	}
+	if (txt == "") {
+		txt = "Nu există nume de capitale care să înceapă cu litera „" + litera + "”";
+	}
+	document.getElementById("filtruCE").innerHTML = txt;
+}
+
+function generare(arrNr) {
+	var arrGen = [];
+	for (i = 0; i < arrNr; i++) {
+		arrGen[i] = Math.floor(Math.random() * 100);
+	}
+	document.getElementById("rndArr").innerHTML = arrGen;
+}
+
+function sort(arrGen) {
+	var ord = arrGen.split(",");
+	ord.sort(function (x, y) {
+		return x - y
+	});
+	document.getElementById('arrOrd').innerHTML = ord;
+}
+
+function strTaiat(a, x) {
+	var strArr = [];
+	var y = Math.ceil(a.length / x);
+	var txt = "";
+	for (i = 0; i < x; i++) {
+		strArr[i] = a.substr(i * y, y);
+		txt += strArr[i] + "<br>"
+	}
+	document.getElementById('taieStr').innerHTML = txt;
+}
+
+function ordNrCar() {
+	var grupaMare = [
+		"Ovidiu - prof",
+		"Cristi - înțelept",
+		"Robert - cool",
+		"Ionuț - biker",
+		"Dodo - profesionist",
+		"Vlad - îndemânatic",
+		"Ligia - isteață",
+		"Alexandra - delicată",
+		"Adriana - simpatică",
+		"Oana - descurcăreață"
+	];
+	var grupaMica = [];
+	var temp = grupaMare[0];
+	var contor = 0;
+	var txt = "<ol>";
+	grupaMare.push("");
+	while (grupaMare.length > 1) {
+		for (i = 0; i < (grupaMare.length - 1); i++) {
+			if (temp.length < grupaMare[i + 1].length) {
+				temp = grupaMare[i];
+				contor = i;
+			} else {
+
+			}
+			alert("elemente grupaMare" + grupaMare.length);
+			alert(temp + temp.length);
+			alert("poziția:" + contor);
+		}
+		alert("a fost ales:" + temp + temp.length);
+		grupaMica.push(temp);
+		grupaMare.splice(contor, 1);
+		alert(grupaMica.length);
+		temp = grupaMare[0];
+	}
+	//grupaMica.push(grupaMare[0]);
+	//grupaMare.splice(0, 1);
+	alert(grupaMica);
 }
