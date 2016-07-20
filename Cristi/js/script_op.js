@@ -127,30 +127,22 @@ function ordNrCar() {
 		"Adriana - simpatică",
 		"Oana - descurcăreață"
 	];
-	var grupaMica = [];
-	var temp = grupaMare[0];
-	var contor = 0;
+	var temp;
 	var txt = "<ol>";
 	grupaMare.push("");
-	while (grupaMare.length > 1) {
+	for (x = 0; x < grupaMare.length - 1; x++) {
 		for (i = 0; i < (grupaMare.length - 1); i++) {
-			if (temp.length < grupaMare[i + 1].length) {
+			if (grupaMare[i].length > grupaMare[i + 1].length) {
 				temp = grupaMare[i];
-				contor = i;
-			} else {
-
+				grupaMare[i] = grupaMare[i + 1];
+				grupaMare[i + 1] = temp;
 			}
-			alert("elemente grupaMare" + grupaMare.length);
-			alert(temp + temp.length);
-			alert("poziția:" + contor);
 		}
-		alert("a fost ales:" + temp + temp.length);
-		grupaMica.push(temp);
-		grupaMare.splice(contor, 1);
-		alert(grupaMica.length);
-		temp = grupaMare[0];
 	}
-	//grupaMica.push(grupaMare[0]);
-	//grupaMare.splice(0, 1);
-	alert(grupaMica);
+	grupaMare.splice(0, 1);
+	for (a = 0; a < grupaMare.length; a++) {
+		txt += "<li>" + grupaMare[a] + "</li>";
+	}
+	txt += "</ol>";
+	document.getElementById('arrNrCar').innerHTML = txt;
 }
