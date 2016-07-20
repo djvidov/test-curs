@@ -177,4 +177,44 @@ function CautaMasina(nume) {
 }
 //AfiseazaNumere(10, 0);
 //AfiseazaNumereCuDoWhile(10, 0);
-CautaMasina("Renault");
+//CautaMasina("Renault");
+function NumaraCuvinte() {
+    var text = 'Eu vreau sa\" \"merg \'la munte\" ca sa ma dau cu saniuta';
+    var result = text.split(" ");
+    document.getElementById("carList").innerHTML = text;
+    return result.length;
+}
+//NumaraCuvinte();
+function ToFixed() {
+    var x = 13.456;
+    var y = x.toFixed(1);
+    y = x.toFixed(2);
+    y = x.toFixed(3);
+}
+//ToFixed();
+function MathFunctions() {
+    var res = Math.random();
+    ToFixed();
+    res = Math.round(4.3);
+    res = Math.round(4.7);
+    res = Math.ceil(4.3);
+    res = Math.ceil(4.7);
+    res = Math.floor(4.3);
+    res = Math.floor(4.7);
+    res = Math.PI;
+}
+//MathFunctions();
+function DateFunctions() {
+    var currentDT = new Date();
+    currentDT = new Date(1999, 09, 11, 22, 14);
+    document.getElementById("carList").innerHTML = currentDT;
+    var dtText = currentDT.toString();
+    var dtText = currentDT.toDateString();
+    var dtText = currentDT.toTimeString();
+    var dtText = currentDT.toUTCString();
+    var dtText = currentDT.getDay();
+    var dtText = currentDT.setFullYear(2222);
+    var dtText = currentDT.getTimezoneOffset();
+    document.getElementById("carList").innerHTML = dtText;
+}
+DateFunctions();
