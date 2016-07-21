@@ -14,41 +14,186 @@
 	<!--Un număr la puterea a doua-->
 	<h3>Calcularea pătratului unui număr</h3>
 	<label for="nr">Numărul:</label>
-	<input type="number" name="nr" maxlenght="3" id="nr">
+	<input type="number" name="nr" maxlenght="3" id="nr" class="numeric">
 	<br>
 	<label for="laputere">La pătrat:</label>
-	<input type="number" name="laputere" readonly id="laputere">
+	<input type="number" name="laputere" readonly id="laputere" class="numeric">
 	<button id="calcul" onclick="laadoua(nr.value)">Calculez</button>
 	<br>
 	<!--Aria unui pătrat-->
 	<br>
 	<h3>Calcularea ariei unui pătrat</h3>
 	<label for="latura">Lungimea laturii:</label>
-	<input type="number" name="latura" maxlenght="3" id="latura">
+	<input type="number" name="latura" maxlenght="3" id="latura" class="numeric">
 	<br>
 	<label for="ariap">Aria pătratului:</label>
-	<input type="number" name="ariap" readonly id="ariap">
+	<input type="number" name="ariap" readonly id="ariap" class="numeric">
 	<button id="aria" onclick="ariap(latura.value)">Calculez</button>
 	<br>
 	<!--Perimetrul pătratului-->
 	<br>
 	<h3>Calcularea perimetrului unui pătrat</h3>
 	<label for="lat">Lungimea laturii:</label>
-	<input type="number" name="lat" maxlenght="3" id="lat">
+	<input type="number" name="lat" maxlenght="3" id="lat" class="numeric">
 	<br>
 	<label for="perimp">Perimetrul pătratului:</label>
-	<input type="number" name="perimp" readonly id="perimp">
+	<input type="number" name="perimp" readonly id="perimp" class="numeric">
 	<button id="perimetrul" onclick="perimp(lat.value)">Calculez</button>
 	<br>
 	<!--Schimbă class-a butonului-->
 	<br>
+	<h3>Schimbă clasa butonului şi mută poza stânga-dreapta</h3
 	<div id="pozeStDr" class="centrat">
 		<div id="pozaSt" class="left">
 			<img id="pokemon" src="resurse/snorlax.gif">
 		</div>
-		<input type="button" id="btnStDr" class="btnDr" onclick="schimbPoza()" value="   Mută poza >>">
-		<div id="pozaDr" class="right"></div>
+		<div class="left">
+			<input type="button" id="btnStDr" class="btnDr" onclick="schimbPoza()" value="   Mută poza >>">
+		</div>
+		<div id="pozaDr" class="left"></div>
 	</div>
+	<br class="liber">
+	<!--Perimetrul figurilor geometrice-->
+	<br>
+	<h3>Calcularea perimetrului unor figuri geometrice</h3>
+	<select name="figuri" id="figuri">
+		<option value="3">Triunghi echilateral</option>
+		<option value="4">Pătrat</option>
+		<option value="5">Pentagon cu laturi egale</option>
+		<option value="6">Hexagon cu laturi egale</option>
+	</select>
+	<label for="lung">Lungimea laturii:</label>
+	<input type="number" name="lung" maxlenght="3" id="lung" class="numeric">
+	<button id="perimFig" onclick="perimFig(lung.value, figuri.value)">Calculez</button>
+	<p id="perimGeo"></p>
+	<br>
+	<!--Operații aritmetice-->
+	<br>
+	<h3>Operații aritmetice</h3>
+	<input type="number" name="operand1" maxlenght="3" id="op1" class="numeric">
+	<select name="operator" id="operator">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select>
+	<input type="number" name="operand2" maxlenght="3" id="op2" class="numeric">
+	<button id="egal" onclick="aritmetic(op1.value, operator.value, op2.value)"> = </button>
+	<p id="rezultat" class="scrisDupa"></p>
+	<br>
+	<!--Ordonare crescătoare-->
+	<br>
+	<h3>Ordonare crescătoare</h3>
+	<label for="nr1">Numărul 1:</label>
+	<input type="number" name="nr1" maxlenght="3" id="nr1" class="numeric">
+	<label for="nr2">Numărul 2:</label>
+	<input type="number" name="nr2" maxlenght="3" id="nr2" class="numeric">
+	<label for="nr3">Numărul 3:</label>
+	<input type="number" name="nr3" maxlenght="3" id="nr3" class="numeric">
+	<button id="btnOrdC" onclick="ordonareC(nr1.value, nr2.value, nr3.value)">Ordonează crescător</button>
+	<p id="ordC" class="scrisDupa"></p>
+	<br>
+	<!--Capitale europene-->
+	<br>
+	<h3>Capitale europene</h3>
+	<div id="capitale">
+		<div id="listaCE1" class="left">
+			<ul>
+				<li><b>Amsterdam</b></li>
+				<li><b>Atena</b></li>
+				<li><b>Berlin</b></li>
+				<li><b>București</b></li>
+				<li><b>Lisabona</b></li>
+				<li><b>Londra</b></li>
+				<li><b>Luxemburg</b></li>
+				<li><b>Madrid</b></li>
+				<li><b>Paris</b></li>
+				<li><b>Roma</b></li>
+			</ul>
+		</div>
+		<div id="alegeL" class="scrisDupa">
+			<br>
+			<label for="litera">Filtrare după litera:</label>
+			<input type="text" name="litera" maxlenght="1" id="litera">
+			<button id="btnFiltru" onclick="filtrareC(litera.value)">Filtrează</button>
+		</div>
+		<div id="filtruCE" class="scrisDupa"></div>
+	</div>
+	<br class="liber">
+	<!--Ordonarea crescătoare a unui array de numere-->
+	<br>
+	<h3>Ordonarea crescătoare a unui array de numere</h3>
+	<p>Alegeți câte numere să conțină array-ul:</p>
+	<input type="number" name="arrNr" maxlenght="3" id="arrNr" class="numeric" required value="10">
+	<button id="btnarray" onclick="generare(arrNr.value)">Generează</button>
+	<p id="rndArr">.</p>
+	<button id="btnsort" onclick="sort(rndArr.innerHTML)">Ordonează</button>
+	<p id="arrOrd">.</p>
+	<br>
+	<!--Împărțirea unui string în părți egale-->
+	<br>
+	<h3>Împărțirea unui string în părți egale</h3>
+	<p>Se dă următorul string:</p>
+	<b><i><p id="strBaza">Pancetta bierschinken pig meatball, pig pig doner andouille. Pork tip biltong tip chuck ham shankle cow pork. Ribeye pig shankle, andouille frankfurter ham tenderloin ham drumstick boudin pork ham shank, hock kielbasa pig bregenwurst tip landjaeger tongue tip porchetta bregenwurst cow tip leberkas tip drumstick, shankle ham mignon ham ham ball ham pork. Biltong ham pork tri-tip.</p></i></b>
+	<p>Alegeți în câte fragmente egale să fie împărțit:</p>
+	<input type="number" name="strBuc" maxlenght="3" id="strBuc" class="numeric" required value="5">
+	<button id="btntaie" onclick="strTaiat(strBaza.innerHTML, strBuc.value)">Taie-o</button>
+	<p id="taieStr">.</p>
+	<br>
+	<!--Ordonarea crescătoare a unui array de string-uri în funcție de numărul de caractere-->
+	<br>
+	<h3>Ordonarea crescătoare a unui array de string-uri în funcție de numărul de caractere</h3>
+	<div class="centrat">
+		<div class="left">
+			<p>Avem următorul array:</p>
+			<ol>
+				<li>Ovidiu - prof</li>
+				<li>Cristi - înțelept</li>
+				<li>Robert - cool</li>
+				<li>Ionuț - biker</li>
+				<li>Dodo - profesionist</li>
+				<li>Vlad - îndemânatic</li>
+				<li>Ligia - isteață</li>
+				<li>Alexandra - delicată</li>
+				<li>Adriana - simpatică</li>
+				<li>Oana - descurcăreață</li>
+			</ol>
+		</div>
+		<div class="left">
+			<p>După apăsarea butonului lista se va ordona după numărul de caractere</p>
+			<button id="btnOrdArr" onclick="ordNrCar()">Ordonează</button>
+		</div>
+		<div class="left">
+			<p id="arrNrCar">.</p>
+		</div>
+	</div>
+	<br class="liber">
+	<!--Câteva operații cu date de tip numeric-->
+	<br>
+	<h3>Câteva operații cu date de tip numeric</h3>
+	<div class="left">
+		<p><b>Aflarea numărului minim și a celui maxim dintr-un array</b></p>
+		<p>La apăsarea butonului se vor genera cinci numere aleatorii unice de la 0 la 100 și se vor afla apoi cel mai mic și cel mai mare dintre ele</p>
+		<button id="btnarray" onclick="genMin()">Generează</button>
+		<p id="rndNr">.</p>
+		<p id="rndMin">.</p>
+		<p id="rndMax">.</p>
+	</div>
+	<div class="left">
+		<p><b>Rotunjirea unui număr cu zecimale</b></p>
+		<p>Introduceți un număr cu zecimale folosind punctul separator, apoi alegeți numărul de zecimale de afișat</p>
+		<label for="nrcuzecimale">Numărul cu zecimale:</label>
+		<input type="number" name="nrcuzecimale" maxlenght="10" id="nrcuzecimale" class="numeric">
+		<br>
+		<label for="nrdezecimale">Numărul de zecimale:</label>
+		<input type="number" name="nrdezecimale" maxlenght="10" id="nrdezecimale" class="numeric">
+		<br>
+		<button id="btnzecim" onclick="nrRotund(nrcuzecimale.value, nrdezecimale.value)">Rotunjește</button>
+		<p id="nrRot">.</p>
+		<p id="nrSus">.</p>
+		<p id="nrJos">.</p>
+	</div>
+
 </body>
 
 </html>
