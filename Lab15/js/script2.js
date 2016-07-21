@@ -264,3 +264,21 @@ function compare() {
     var k = 4 !== 5 || 3 !== 3; //true
 }
 compare();
+
+function ConfirmWindow() {
+    var result = confirm("Apasa un buton");
+    var x = null;
+    if (result) {
+        x = "Ai apasat ok";
+    }
+    else {
+        x = "Ai apasat cancel";
+    }
+    document.getElementById("carList").innerHTML = x;
+}
+//ConfirmWindow();
+function PromptWindow() {
+    var person = prompt("Cum te cheama?");
+    document.getElementById("carList").innerHTML = "Hello " + person;
+}
+PromptWindow();
