@@ -146,3 +146,32 @@ function ordNrCar() {
 	txt += "</ol>";
 	document.getElementById('arrNrCar').innerHTML = txt;
 }
+
+function genMin() {
+	var nrRand = [];
+	for (i = 0; i < 5; i++) {
+		nrRand[i] = Math.floor(Math.random() * 100);
+		if (i > 0) { //verific dacă numărul e unic
+			for (a = i - 1; a >= 0; a--) {
+				if (nrRand[i] === nrRand[a]) {
+					nrRand[i] = Math.floor(Math.random() * 100);
+				}
+			}
+		}
+	}
+	document.getElementById('rndNr').innerHTML = nrRand;
+	var txt;
+	txt = "Numărul cel mai mic este:<br>" + Math.min(...nrRand);
+	document.getElementById('rndMin').innerHTML = txt;
+	txt = "Numărul cel mai mare este:<br>" + Math.max(...nrRand);
+	document.getElementById('rndMax').innerHTML = txt;
+}
+
+function nrRotund(nr001, nr002) {
+	var num = parseFloat(nr001);
+	var zec = parseFloat(nr002);
+	var n = num.toFixed(zec);
+	document.getElementById('nrRot').innerHTML = "Numărul rotunjit este: " + n;
+	document.getElementById('nrSus').innerHTML = "Numărul rotunjit prin adăugare este: " + Math.ceil(n);
+	document.getElementById('nrJos').innerHTML = "Numărul rotunjit prin scădere este:  " + Math.floor(n);
+}

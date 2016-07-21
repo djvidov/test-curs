@@ -167,6 +167,32 @@
 			<p id="arrNrCar">.</p>
 		</div>
 	</div>
+	<br class="liber">
+	<!--Câteva operații cu date de tip numeric-->
+	<br>
+	<h3>Câteva operații cu date de tip numeric</h3>
+	<div class="left">
+		<p><b>Aflarea numărului minim și a celui maxim dintr-un array</b></p>
+		<p>La apăsarea butonului se vor genera cinci numere aleatorii unice de la 0 la 100 și se vor afla apoi cel mai mic și cel mai mare dintre ele</p>
+		<button id="btnarray" onclick="genMin()">Generează</button>
+		<p id="rndNr">.</p>
+		<p id="rndMin">.</p>
+		<p id="rndMax">.</p>
+	</div>
+	<div class="left">
+		<p><b>Rotunjirea unui număr cu zecimale</b></p>
+		<p>Introduceți un număr cu zecimale folosind punctul separator, apoi alegeți numărul de zecimale de afișat</p>
+		<label for="nrcuzecimale">Numărul cu zecimale:</label>
+		<input type="number" name="nrcuzecimale" maxlenght="10" id="nrcuzecimale" class="numeric">
+		<br>
+		<label for="nrdezecimale">Numărul de zecimale:</label>
+		<input type="number" name="nrdezecimale" maxlenght="10" id="nrdezecimale" class="numeric">
+		<br>
+		<button id="btnzecim" onclick="nrRotund(nrcuzecimale.value, nrdezecimale.value)">Rotunjește</button>
+		<p id="nrRot">.</p>
+		<p id="nrSus">.</p>
+		<p id="nrJos">.</p>
+	</div>
 
 </body>
 

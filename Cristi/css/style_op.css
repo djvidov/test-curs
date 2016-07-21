@@ -28,6 +28,11 @@
 	text-align: right;
 }
 
+#nrcuzecimale,
+#nrdezecimale {
+	width: 100px;
+}
+
 #btnStDr {
 	margin: auto;
 }
@@ -36,6 +41,7 @@
 	float: left;
 	width: 300px;
 	height: 300px;
+	padding: 10;
 }
 
 .liber {
