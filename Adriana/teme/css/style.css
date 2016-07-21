@@ -1,0 +1,13 @@
+.darkTheme {
+    background-color: black ;
+    color:gray;
+}
+
+.lightTheme {
+    background-color: lightgray;
+    color: black;
+}
+
+orangeTheme{
+    background-color: orange;
+}
