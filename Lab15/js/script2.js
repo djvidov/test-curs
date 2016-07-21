@@ -217,4 +217,50 @@ function DateFunctions() {
     var dtText = currentDT.getTimezoneOffset();
     document.getElementById("carList").innerHTML = dtText;
 }
-DateFunctions();
+//DateFunctions();
+function minArr(val) {
+    var min = null;
+    for (var i = 0; i < val.length; i++) {
+        if (i == 0) {
+            min = val[i];
+            continue;
+        }
+        //if (min > val[i]) min = val[i];
+        if (!(min <= val[i])) min = val[i];
+    }
+    return min;
+}
+
+function maxArr(val) {
+    var max = null;
+    for (var i = 0; i < val.length; i++) {
+        if (i == 0) {
+            max = val[i];
+            continue;
+        }
+        //if (max < val[i]) max = val[i];
+        max = max < val[i] ? val[i] : max;
+        //max < val[i] ? callF1() : callF2();
+    }
+    return max;
+}
+maxArr([7, 4, 5, 3, 2, 7, 6]);
+minArr([7, 4, 5, 3, 2, 7, 6]);
+//lab 18
+function compare() {
+    var x = 3 == "3"; //true
+    var y = 3 == 3; //true
+    var z = 4 == 5; //false
+    var a = 3 != "3"; //false
+    var b = 3 != 3; //false
+    var c = 4 != 5; //true
+    var d = 3 === "3"; //false
+    var e = 3 === 3; //true
+    var f = 4 === 5; //false
+    var g = 3 !== "3"; //true
+    var h = 3 !== 3; //false
+    var i = 4 !== 5; //true
+    var j = 3 !== 3 && 4 !== 5; //false
+    var k = 4 !== 5 || 3 !== 3; //true
+}
+compare();
