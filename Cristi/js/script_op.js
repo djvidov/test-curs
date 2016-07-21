@@ -169,7 +169,7 @@ function genMin() {
 
 function nrRotund(nr001, nr002) {
 	var num = parseFloat(nr001);
-	var zec = parseFloat(nr002);
+	var zec = parseInt(nr002);
 	var n = num.toFixed(zec);
 	document.getElementById('nrRot').innerHTML = "Numărul rotunjit este: " + n;
 	document.getElementById('nrSus').innerHTML = "Numărul rotunjit prin adăugare este: " + Math.ceil(n);
