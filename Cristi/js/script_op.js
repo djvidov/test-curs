@@ -175,3 +175,62 @@ function nrRotund(nr001, nr002) {
 	document.getElementById('nrSus').innerHTML = "Numărul rotunjit prin adăugare este: " + Math.ceil(n);
 	document.getElementById('nrJos').innerHTML = "Numărul rotunjit prin scădere este:  " + Math.floor(n);
 }
+
+function divCuText() {
+	var divNou = document.createElement("DIV");
+	var text = document.createTextNode("Acesta e un div nou");
+	divNou.appendChild(text);
+	document.getElementById('probe1').appendChild(divNou);
+}
+
+function remLi() {
+	var lista = document.getElementById("oLista");
+
+	if (lista.hasChildNodes()) {
+		lista.removeChild(lista.childNodes[1]); //Primul child este indentarea, deci primul articol are index[1]
+	}
+}
+
+function repLi() {
+	var p = document.getElementById("ptReplace");
+	var articolText = document.createTextNode("Textul a fost înlocuit.");
+	p.replaceChild(articolText, p.childNodes[0]);
+}
+
+function daAtribut() {
+	var p = document.getElementById("ptReplace");
+	var att = document.createAttribute("class");
+	att.value = "btnDr";
+	p.setAttributeNode(att);
+}
+
+function cautClass() {
+	var x = document.getElementsByClassName("btnDr");
+	for (i = 0; i < x.length; i++) {
+		if (x[i].tagName = "P") {
+			x[i].innerHTML = "Iar am schimbat textul.";
+			x[i].classList.add("btnSt");
+		}
+	}
+}
+
+function cautNume() {
+	var x = document.getElementsByName("btnNume");
+	x[0].classList.add("btnDr");
+}
+
+function cautTagName() {
+	var x = document.getElementsByTagName("DIV");
+	document.getElementById("ptDivuri").innerHTML = "În acest document sunt " + x.length + " div-uri.";
+}
+
+function numLink() {
+	var x = document.links.length;
+	document.getElementById("ptLink").innerHTML = "În acest document sunt " + x + " link-uri.";
+}
+
+function nuClick() {
+	document.getElementById("btnClick").click();
+	var txt = "Dimensiunile acestui buton sunt: " + btnClick.clientWidth + " x " + btnClick.clientHeight + " pixeli.";
+	document.getElementById("ptDimensiuni").innerHTML = txt;
+}
