@@ -1,0 +1,48 @@
+
+}
+a {
+	outline: none;
+}
+
+img  {
+	border: 0;
+}
+
+p a {
+	color: #A8279D;
+}
+
+p a:hover {
+	text-decoration: none;
+}
+
+#header {
+	background: #ededed;
+	padding-bottom: 23px;
+	width: 100%;
+}
+
+#header div {
+	margin: 0 auto;
+	width: 100%;
+}
+
+div {
+	position:relative;
+}
+
+ ul.custom-nav li.custom-nav {
+	display: inline;
+	float:left;
+	height: 60px;
+	margin: 0x;
+	 margin-left: -100;
+	width: 160px;
+	font-size: 18px;
+	padding:8px 16px;
+	text-align: center;
+}
+
+#li {
+	margin-left: 0;
+}
