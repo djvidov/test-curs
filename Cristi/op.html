@@ -193,7 +193,40 @@
 		<p id="nrSus">.</p>
 		<p id="nrJos">.</p>
 	</div>
-
+	<br class="liber">
+	<!--Metode de modificare a structurii paginii-->
+	<br>
+	<h3>Metode de modificare a structurii paginii</h3>
+	<div id="probe1" class="left">
+		<p>Prin apăsarea butonului următor se va creea un div în interiorul căruia va fi scris textul „Acesta e un div nou”.</p>
+		<button id="btnDivNou" onclick="divCuText()">Fac un div</button>
+	</div>
+	<div id="probe2" class="left">
+		<!--Facem o listă cu indentare unde primul child este indentarea și al doilea child este primul articol-->
+		<ol id="oLista">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+		</ol>
+		<button id="btnRemLi" onclick="remLi()">Șterge primul articol</button>
+		<p id="ptReplace">Acest text va fi înlocuit.</p>
+		<button id="btnRepLi" onclick="repLi()">Înlocuiește</button>
+		<button id="btnAtr" onclick="daAtribut()">Adaugă paragrafului o clasă</button>
+		<button id="btnCls" onclick="cautClass()">Caută classa</button>
+		<button name="btnNume" onclick="cautNume()">Caută numele</button>
+	</div>
+	<div id="probe3" class="left">
+		<p id="ptDivuri">Numărați câte div-uri sunt în acest document.</p>
+		<button id="btnDivuri" onclick="cautTagName()">Numără div-urile</button>
+		<p id="ptLink">Numărați câte link-uri sunt în acest document.</p>
+		<a href="#ptLink">Un link de probă</a>
+		<button id="btnDivuri" onclick="numLink()">Numără link-urile</button>
+		<br>
+		<hr>
+		<button id="btnClick" onmouseover="nuClick()" onclick="alert('Am zis să nu apăsați!!!')" class="btnSt">NU APĂSAȚI ACEST BUTON!</button>
+		<p id="ptDimensiuni">.</p>
+	</div>
+	<br class="liber">
 </body>
 
 </html>
