@@ -1,0 +1,23 @@
+<!DOCTYPE hmtl>
+<html>
+
+<head>
+    <title>Site-ul meu</title>
+    <link rel="shortcut icon" href="https://www.bootstrapcdn.com/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/united/bootstrap.min.css" crossorigin="anonymous"> </head>
+
+<body id="app">
+    <div class="container">
+        <H1>Site-ul meu</H1>
+        <div v-for="subtitlu in subtitluri"> <a href="#">{{subtitlu.text}}</a> </div>
+        <div>
+            <h3>{{ subtitlu }}</h3> <em class="blockquote text-left">{{descriere}}</em>
+            <p class="{{textalign}}">{{ articol }}</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/vue/1.0.24/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
